@@ -28,7 +28,27 @@ def icy_hot?(a, b)
 	return false
 end
 
-# Closer to need to write
+def closer_to(target, a, b)
+	aDifference = target - a
+	bDifference = target - b
+	if aDifference < 0
+		aDifference2 = aDifference - aDifference
+		aDifference = aDifference2 - aDifference
+	end
+	if bDifference < 0
+		bDifference2 = bDifference - bDifference
+		bDifference = bDifference2 - bDifference
+	end
+	if aDifference < bDifference
+		return a
+	end
+	if bDifference < aDifference
+		return b
+	end
+	return 0
+end
+
+
 
 
 def two_as_one?(a, b, c)
