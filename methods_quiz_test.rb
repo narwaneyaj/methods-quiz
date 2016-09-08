@@ -53,4 +53,19 @@ describe '' do
     end
   end
 
+  describe 'pig_latinify' do
+    it 'starts with a consonant' do
+      pig_latinify("hello").must_equal("ellohay")
+    end
+    it 'starts with a vowel' do
+      pig_latinify("apple").must_equal("appleway")
+    end
+    it 'has a blank space' do
+      pig_latinify(" happy").must_equal("appyhay")
+   end
+   it 'has random capital letters' do
+     pig_latinify("AdItI").must_equal("aditiway")
+   end
+ end
+
 end

@@ -48,9 +48,6 @@ def closer_to(target, a, b)
 	return 0
 end
 
-
-
-
 def two_as_one?(a, b, c)
 	if a + b == c || a + c == b || b + c == a
 		return true
@@ -58,4 +55,16 @@ def two_as_one?(a, b, c)
 	return false
 end
 
-# TODO - write pig_latinify
+def pig_latinify(str)
+	str = str.lstrip
+	str = str.rstrip
+	str = str.downcase
+	if str.start_with?("a", "e", "i", "o", "u")
+		return str + "way"
+	end
+	initial = str[0]
+	str = str.reverse
+	str2 = str.chop
+	str3 = str2.reverse
+	return str3 + initial + "ay"
+end
