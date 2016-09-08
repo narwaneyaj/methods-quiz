@@ -18,7 +18,16 @@ def not_string(str)
 	return "not" + str
 end
 
-# TODO - write icy_hot?
+def icy_hot?(a, b)
+	if a > 100 && b < 0
+			return true
+		end
+	if b > 100 && a < 0
+		return true
+	end
+	return false
+end
+
 
 # TODO - write closer_to
 

@@ -22,4 +22,13 @@ describe '' do
     end
   end
 
+  describe 'icy_hot?' do
+    it 'has one icy and one hot' do
+      icy_hot?(-12, 104).must_equal(true)
+    end
+    it 'does not have one icy and one hot' do
+      icy_hot?(55, 40).must_equal(false)
+    end
+  end
+
 end
