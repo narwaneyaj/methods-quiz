@@ -28,9 +28,14 @@ def icy_hot?(a, b)
 	return false
 end
 
+# Closer to need to write
 
-# TODO - write closer_to
 
-# TODO - write two_as_one?
+def two_as_one?(a, b, c)
+	if a + b == c || a + c == b || b + c == a
+		return true
+	end
+	return false
+end
 
 # TODO - write pig_latinify

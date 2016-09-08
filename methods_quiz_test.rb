@@ -31,4 +31,26 @@ describe '' do
     end
   end
 
+  # describe 'closer_to' do
+  #   it 'has the first number closer to the target' do
+  #     closer_to(12, 13, 7).must_equal(13)
+  #   end
+  #   it 'has the second number closer to the target' do
+  #     closer_to(15, 11, 14).must_equal(14)
+  #   end
+  #   it 'has equal distance between the two numbers' do
+  #     closer_to(10, 5, 15).must_equal(0)
+  #   end
+  # end
+
+  describe 'two_as_one?' do
+    it 'has two numbers whose sums add up to the third number' do
+      two_as_one?(3, 4, 7).must_equal(true)
+      two_as_one?(2, 5, 3).must_equal(true)
+    end
+    it 'does not have two numbers whose sums add up to the third number' do
+      two_as_one?(1, 6, 9).must_equal(false)
+    end
+  end
+
 end
