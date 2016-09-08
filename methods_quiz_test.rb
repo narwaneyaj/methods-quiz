@@ -13,4 +13,13 @@ describe '' do
     end
   end
 
+  describe 'not_string' do
+    it 'does not start with not' do
+      not_string("hello").must_equal("nothello")
+    end
+    it 'does start with not' do
+      not_string("nothi").must_equal("nothi")
+    end
+  end
+
 end
